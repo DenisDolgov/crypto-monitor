@@ -251,7 +251,7 @@ class ResponseClass(str, Enum):
 class CandidateAttempt:
     url: str
     origin: CandidateOrigin
-    status: int | None
+    http_status: int | None
     response_class: ResponseClass | None
     reason_code: str | None
     size_bytes: int
@@ -298,6 +298,8 @@ def run(rows: Sequence[ExchangerRow], config: RunConfig, deps: Deps) -> Report: 
 - `blocked` на `robots.txt` завершает домен целиком: если нам отказали в правилах, дальше не идём.
 - `ok` — терминальное состояние домена; оставшиеся кандидаты не проверяются.
 - Один упавший домен не прерывает прогон (MYSP-2 §6). Исключения фатальны только для записи отчётов и чтения входа.
+- `--limit N` применяется после сортировки доменов по алфавиту: прогон «первых N» воспроизводим и не зависит от порядка строк в CSV.
+- Логи — stdlib `logging` в stderr, человекочитаемо, без тел ответов; `--verbose` включает отладочные строки по кандидатам. Лог-файлов нет: единственный артефакт прогона — два отчёта.
 
 ## Контракт отчёта
 
