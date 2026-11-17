@@ -49,7 +49,9 @@ def parse(root: ET.Element, source_url: str) -> list[RawRate]:
                 reserve_currency_id=None,
                 min_raw=_clean(values.get("minamount") or values.get("min")),
                 max_raw=_clean(values.get("maxamount") or values.get("max")),
-                fee_raw=_clean(values.get("tofee") or values.get("fee")),
+                # ``tofee`` is an absolute commission in the receive currency,
+                # not a percentage: mapping it to ``fee_percent`` would lie.
+                fee_raw=_clean(values.get("fee")),
                 updated_raw=_clean(values.get("updated") or values.get("last_update")),
                 path=f"/rates/item[{index + 1}]",
             )

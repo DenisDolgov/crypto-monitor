@@ -259,3 +259,13 @@ def test_rate_to_dict_keeps_precision_as_string():
     assert payload["rate"] == "92.35"
     assert payload["direction"] == "USDT/RUB"
     assert payload["raw"]["format"] == "own_schema"
+
+
+def test_unparsable_optional_amount_is_null_with_warning():
+    # A live BestChange-compatible feed publishes "150 USD" as min/max.
+    document = normalize(raw(min_raw="150 USD", max_raw="12000 USD"))
+    rate = document.rates[0]
+    assert rate.min_amount is None
+    assert rate.max_amount is None
+    assert "invalid_amount:min" in rate.warnings
+    assert "invalid_amount:max" in rate.warnings

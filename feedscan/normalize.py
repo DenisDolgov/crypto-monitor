@@ -247,6 +247,22 @@ def _normalize_one(
     if reserve_warning:
         warnings.append(reserve_warning)
 
+    # An optional amount that is present but not numeric is not a reason to
+    # drop the rate (ADR-0001), but it must not look like "not published"
+    # either: real BestChange feeds write "150 USD" into min/max.
+    for field_name, raw_value, parsed_value in (
+        ("min", item.min_raw, min_amount),
+        ("max", item.max_raw, max_amount),
+        ("fee", item.fee_raw, fee),
+        ("reserve", item.reserve_raw, reserve),
+    ):
+        if raw_value is None or str(raw_value).strip() == "":
+            continue
+        if parsed_value is None and f"invalid_amount:{field_name}" not in warnings:
+            if field_name == "reserve" and reserve_warning:
+                continue
+            warnings.append(f"invalid_amount:{field_name}")
+
     updated_at = None
     if item.updated_raw is not None and str(item.updated_raw).strip():
         updated_at = parse_updated_at(item.updated_raw)
