@@ -1,0 +1,1849 @@
+{
+  "generated_at": "2026-11-17T10:00:20Z",
+  "config": {
+    "version": "0.1.0",
+    "input": "data/exchangers.csv",
+    "currencies": "data/currencies.csv",
+    "connect_timeout_s": 5.0,
+    "timeout_s": 15.0,
+    "retries": 2,
+    "per_domain_interval_s": 1.0,
+    "max_bytes": 5242880,
+    "max_body_bytes": 5242880,
+    "max_redirects": 3,
+    "ua_contact": "https://github.com/DenisDolgov/crypto-monitor",
+    "mvp_directions": [
+      "USDT/RUB",
+      "BTC/RUB"
+    ]
+  },
+  "summary": {
+    "domains_total": 25,
+    "status_counts": {
+      "ok": 1,
+      "not_found": 14,
+      "html": 5,
+      "blocked": 2,
+      "error": 3
+    },
+    "format_counts": {
+      "own_schema": 0,
+      "bestchange_compatible": 1,
+      "csv": 0,
+      "json": 0,
+      "unknown": 24
+    },
+    "feeds_ok": 1,
+    "feeds_with_mvp_directions": 0,
+    "input_errors": 0,
+    "dropped_rate_rows": {
+      "duplicate_rate": 30
+    },
+    "top_unmapped_currencies": [
+      {
+        "id": "ADVCEUR",
+        "count": 7
+      },
+      {
+        "id": "ADVCUSD",
+        "count": 7
+      },
+      {
+        "id": "CARDEUR",
+        "count": 7
+      },
+      {
+        "id": "CARDUSD",
+        "count": 7
+      },
+      {
+        "id": "NTLREUR",
+        "count": 7
+      }
+    ]
+  },
+  "domains": [
+    {
+      "domain": "60cek.org",
+      "name": "60cek",
+      "source": "manual",
+      "status": "blocked",
+      "reason_code": "challenge_cloudflare",
+      "reason_detail": "HTTP 403, marker=\"challenge-platform\", title=\"403 Forbidden\", final_url=https://60sek.net/rates.xml?legacy_source=8h2eszd",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch",
+        "cross_domain_redirect",
+        "too_many_redirects"
+      ],
+      "attempts": [
+        {
+          "url": "https://60cek.org/rates.xml",
+          "origin": "well_known",
+          "http_status": 403,
+          "response_class": "blocked",
+          "reason_code": "challenge_cloudflare",
+          "size_bytes": 1260,
+          "duration_ms": 461,
+          "http_requests": 3
+        },
+        {
+          "url": "https://60cek.org/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 0,
+          "duration_ms": 2036,
+          "http_requests": 4
+        },
+        {
+          "url": "https://60cek.org/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 0,
+          "duration_ms": 2054,
+          "http_requests": 4
+        },
+        {
+          "url": "https://60cek.org/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 302,
+          "response_class": "transport_error",
+          "reason_code": "too_many_redirects",
+          "size_bytes": 0,
+          "duration_ms": 1991,
+          "http_requests": 4
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:02Z",
+      "duration_ms": 17195,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, обменник из каталога BestChange"
+    },
+    {
+      "domain": "alfacash.com",
+      "name": "AlfaCash",
+      "source": "manual",
+      "status": "blocked",
+      "reason_code": "challenge_cloudflare",
+      "reason_detail": "HTTP 403, marker=\"just a moment\", title=\"Just a moment...\", final_url=https://www.hugedomains.com/domain_profile.cfm?d=alfacash.com",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "cross_domain_redirect",
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://alfacash.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 403,
+          "response_class": "blocked",
+          "reason_code": "challenge_cloudflare",
+          "size_bytes": 5726,
+          "duration_ms": 862,
+          "http_requests": 2
+        },
+        {
+          "url": "https://alfacash.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 403,
+          "response_class": "blocked",
+          "reason_code": "challenge_cloudflare",
+          "size_bytes": 5726,
+          "duration_ms": 1039,
+          "http_requests": 2
+        },
+        {
+          "url": "https://alfacash.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 403,
+          "response_class": "blocked",
+          "reason_code": "challenge_cloudflare",
+          "size_bytes": 5704,
+          "duration_ms": 929,
+          "http_requests": 2
+        },
+        {
+          "url": "https://alfacash.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 403,
+          "response_class": "blocked",
+          "reason_code": "challenge_cloudflare",
+          "size_bytes": 5726,
+          "duration_ms": 1051,
+          "http_requests": 2
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:19Z",
+      "duration_ms": 6480,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, фиатный обменник"
+    },
+    {
+      "domain": "baksman.org",
+      "name": "Baksman",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "robots_disallowed",
+      "reason_detail": "главная запрещена robots.txt",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [],
+      "attempts": [
+        {
+          "url": "https://baksman.org/",
+          "origin": "homepage_link",
+          "http_status": null,
+          "response_class": "not_found",
+          "reason_code": "robots_disallowed",
+          "size_bytes": 0,
+          "duration_ms": 0,
+          "http_requests": 1
+        },
+        {
+          "url": "https://baksman.org/rates.xml",
+          "origin": "well_known",
+          "http_status": null,
+          "response_class": "not_found",
+          "reason_code": "robots_disallowed",
+          "size_bytes": 0,
+          "duration_ms": 0,
+          "http_requests": 1
+        },
+        {
+          "url": "https://baksman.org/export/rates.xml",
+          "origin": "well_known",
+          "http_status": null,
+          "response_class": "not_found",
+          "reason_code": "robots_disallowed",
+          "size_bytes": 0,
+          "duration_ms": 0,
+          "http_requests": 1
+        },
+        {
+          "url": "https://baksman.org/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": null,
+          "response_class": "not_found",
+          "reason_code": "robots_disallowed",
+          "size_bytes": 0,
+          "duration_ms": 0,
+          "http_requests": 1
+        },
+        {
+          "url": "https://baksman.org/bestchange.xml",
+          "origin": "well_known",
+          "http_status": null,
+          "response_class": "not_found",
+          "reason_code": "robots_disallowed",
+          "size_bytes": 0,
+          "duration_ms": 0,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:26Z",
+      "duration_ms": 1217,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, обменник из каталога BestChange"
+    },
+    {
+      "domain": "bitpapa.com",
+      "name": "Bitpapa",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://bitpapa.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 43053,
+          "duration_ms": 968,
+          "http_requests": 1
+        },
+        {
+          "url": "https://bitpapa.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 27477,
+          "duration_ms": 909,
+          "http_requests": 1
+        },
+        {
+          "url": "https://bitpapa.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 27471,
+          "duration_ms": 915,
+          "http_requests": 1
+        },
+        {
+          "url": "https://bitpapa.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 43068,
+          "duration_ms": 977,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:27Z",
+      "duration_ms": 6185,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, p2p-обменник"
+    },
+    {
+      "domain": "btc-alpha.com",
+      "name": "BTC-Alpha",
+      "source": "manual",
+      "status": "html",
+      "reason_code": "html_page",
+      "reason_detail": "HTTP 200, title=\"ALP.COM: Bitcoin Exchange | Cryptocurrency Exchange\", final_url=https://www.alp.com/rates.xml",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch",
+        "cross_domain_redirect"
+      ],
+      "attempts": [
+        {
+          "url": "https://btc-alpha.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 5050,
+          "duration_ms": 1041,
+          "http_requests": 2
+        },
+        {
+          "url": "https://btc-alpha.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 5050,
+          "duration_ms": 975,
+          "http_requests": 2
+        },
+        {
+          "url": "https://btc-alpha.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 5050,
+          "duration_ms": 1019,
+          "http_requests": 2
+        },
+        {
+          "url": "https://btc-alpha.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 5050,
+          "duration_ms": 960,
+          "http_requests": 2
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:33Z",
+      "duration_ms": 12674,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, биржа"
+    },
+    {
+      "domain": "changelly.com",
+      "name": "Changelly",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://changelly.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 392915,
+          "duration_ms": 1009,
+          "http_requests": 1
+        },
+        {
+          "url": "https://changelly.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 392915,
+          "duration_ms": 1063,
+          "http_requests": 1
+        },
+        {
+          "url": "https://changelly.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 392914,
+          "duration_ms": 935,
+          "http_requests": 1
+        },
+        {
+          "url": "https://changelly.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 393047,
+          "duration_ms": 994,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:46Z",
+      "duration_ms": 6181,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, крупный обменный сервис"
+    },
+    {
+      "domain": "changenow.io",
+      "name": "ChangeNOW",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://changenow.io/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 146,
+          "duration_ms": 1324,
+          "http_requests": 1
+        },
+        {
+          "url": "https://changenow.io/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 146,
+          "duration_ms": 927,
+          "http_requests": 1
+        },
+        {
+          "url": "https://changenow.io/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 146,
+          "duration_ms": 1014,
+          "http_requests": 1
+        },
+        {
+          "url": "https://changenow.io/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 146,
+          "duration_ms": 1025,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:52Z",
+      "duration_ms": 6412,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, домен отдавал 451 при разведке"
+    },
+    {
+      "domain": "coinpayments.net",
+      "name": "CoinPayments",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch",
+        "cross_domain_redirect"
+      ],
+      "attempts": [
+        {
+          "url": "https://coinpayments.net/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 47459,
+          "duration_ms": 2028,
+          "http_requests": 2
+        },
+        {
+          "url": "https://coinpayments.net/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 47459,
+          "duration_ms": 1928,
+          "http_requests": 2
+        },
+        {
+          "url": "https://coinpayments.net/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 47459,
+          "duration_ms": 1981,
+          "http_requests": 2
+        },
+        {
+          "url": "https://coinpayments.net/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 47459,
+          "duration_ms": 2023,
+          "http_requests": 2
+        }
+      ],
+      "checked_at": "2026-11-17T09:55:58Z",
+      "duration_ms": 13212,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, платёжный обменник"
+    },
+    {
+      "domain": "emcd.io",
+      "name": "EMCD",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://emcd.io/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 214790,
+          "duration_ms": 1518,
+          "http_requests": 1
+        },
+        {
+          "url": "https://emcd.io/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 214862,
+          "duration_ms": 243,
+          "http_requests": 1
+        },
+        {
+          "url": "https://emcd.io/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 214853,
+          "duration_ms": 1035,
+          "http_requests": 1
+        },
+        {
+          "url": "https://emcd.io/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 214795,
+          "duration_ms": 1570,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:56:11Z",
+      "duration_ms": 6408,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, пул и обменник"
+    },
+    {
+      "domain": "exhub.io",
+      "name": "ExHub",
+      "source": "manual",
+      "status": "html",
+      "reason_code": "html_page",
+      "reason_detail": "HTTP 200, title=\"exhub.io\"",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://exhub.io/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 641,
+          "duration_ms": 1011,
+          "http_requests": 1
+        },
+        {
+          "url": "https://exhub.io/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 641,
+          "duration_ms": 995,
+          "http_requests": 1
+        },
+        {
+          "url": "https://exhub.io/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 641,
+          "duration_ms": 1007,
+          "http_requests": 1
+        },
+        {
+          "url": "https://exhub.io/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 641,
+          "duration_ms": 1008,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:56:18Z",
+      "duration_ms": 6298,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, обменник с публичным API обмена"
+    },
+    {
+      "domain": "exolix.com",
+      "name": "Exolix",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://exolix.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60350,
+          "duration_ms": 1013,
+          "http_requests": 1
+        },
+        {
+          "url": "https://exolix.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60595,
+          "duration_ms": 998,
+          "http_requests": 1
+        },
+        {
+          "url": "https://exolix.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60490,
+          "duration_ms": 1010,
+          "http_requests": 1
+        },
+        {
+          "url": "https://exolix.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60525,
+          "duration_ms": 1004,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:56:24Z",
+      "duration_ms": 6178,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, крипто-обменник"
+    },
+    {
+      "domain": "fixedfloat.com",
+      "name": "FixedFloat",
+      "source": "manual",
+      "status": "html",
+      "reason_code": "html_page",
+      "reason_detail": "HTTP 200, final_url=https://ff.io/rates.xml",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch",
+        "cross_domain_redirect",
+        "sitemap:too_large"
+      ],
+      "attempts": [
+        {
+          "url": "https://fixedfloat.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 1002328,
+          "duration_ms": 1082,
+          "http_requests": 2
+        },
+        {
+          "url": "https://fixedfloat.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 48654,
+          "duration_ms": 887,
+          "http_requests": 2
+        },
+        {
+          "url": "https://fixedfloat.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 48609,
+          "duration_ms": 1005,
+          "http_requests": 2
+        },
+        {
+          "url": "https://fixedfloat.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 48624,
+          "duration_ms": 1027,
+          "http_requests": 2
+        }
+      ],
+      "checked_at": "2026-11-17T09:56:30Z",
+      "duration_ms": 6821,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, крипто-крипто обменник без регистрации"
+    },
+    {
+      "domain": "garantex.io",
+      "name": "Garantex",
+      "source": "manual",
+      "status": "error",
+      "reason_code": "robots_unavailable",
+      "reason_detail": "robots.txt недоступен (dns_error); проверка домена не выполнена",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [],
+      "attempts": [],
+      "checked_at": "2026-11-17T09:56:37Z",
+      "duration_ms": 108,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, биржа; домен недоступен при разведке"
+    },
+    {
+      "domain": "guardarian.com",
+      "name": "Guardarian",
+      "source": "manual",
+      "status": "html",
+      "reason_code": "html_page",
+      "reason_detail": "HTTP 200, title=\"Buy, Sell, and Swap crypto on Guardarian | Fiat On/Off Ramp &amp; Best rates\"",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://guardarian.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 351223,
+          "duration_ms": 1142,
+          "http_requests": 1
+        },
+        {
+          "url": "https://guardarian.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 190453,
+          "duration_ms": 688,
+          "http_requests": 1
+        },
+        {
+          "url": "https://guardarian.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 190450,
+          "duration_ms": 1019,
+          "http_requests": 1
+        },
+        {
+          "url": "https://guardarian.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 351273,
+          "duration_ms": 1039,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:56:37Z",
+      "duration_ms": 6179,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, фиатный on-ramp"
+    },
+    {
+      "domain": "kassa.cc",
+      "name": "Kassa.cc",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://kassa.cc/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 41902,
+          "duration_ms": 1731,
+          "http_requests": 2
+        },
+        {
+          "url": "https://kassa.cc/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 41902,
+          "duration_ms": 1985,
+          "http_requests": 2
+        },
+        {
+          "url": "https://kassa.cc/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 41902,
+          "duration_ms": 2011,
+          "http_requests": 2
+        },
+        {
+          "url": "https://kassa.cc/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 41902,
+          "duration_ms": 2010,
+          "http_requests": 2
+        }
+      ],
+      "checked_at": "2026-11-17T09:56:43Z",
+      "duration_ms": 11237,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, обменник из каталога BestChange"
+    },
+    {
+      "domain": "letsexchange.io",
+      "name": "LetsExchange",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://letsexchange.io/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 100792,
+          "duration_ms": 1033,
+          "http_requests": 1
+        },
+        {
+          "url": "https://letsexchange.io/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 100823,
+          "duration_ms": 1036,
+          "http_requests": 1
+        },
+        {
+          "url": "https://letsexchange.io/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 100814,
+          "duration_ms": 876,
+          "http_requests": 1
+        },
+        {
+          "url": "https://letsexchange.io/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 100807,
+          "duration_ms": 1000,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:56:55Z",
+      "duration_ms": 6549,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, крупный мультивалютный обменник"
+    },
+    {
+      "domain": "moonpay.com",
+      "name": "MoonPay",
+      "source": "manual",
+      "status": "html",
+      "reason_code": "html_page",
+      "reason_detail": "HTTP 200, title=\"MoonPay: Buy and sell Bitcoin, Ethereum, and other cryptos\", final_url=https://www.moonpay.com/rates.xml",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch",
+        "cross_domain_redirect"
+      ],
+      "attempts": [
+        {
+          "url": "https://moonpay.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 68693,
+          "duration_ms": 1816,
+          "http_requests": 2
+        },
+        {
+          "url": "https://moonpay.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 40080,
+          "duration_ms": 1991,
+          "http_requests": 2
+        },
+        {
+          "url": "https://moonpay.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 40074,
+          "duration_ms": 2090,
+          "http_requests": 2
+        },
+        {
+          "url": "https://moonpay.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "html",
+          "reason_code": "html_page",
+          "size_bytes": 68723,
+          "duration_ms": 1933,
+          "http_requests": 2
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/en.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1497968,
+          "duration_ms": 1028,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/en-au.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1378807,
+          "duration_ms": 957,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/en-gb.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1380305,
+          "duration_ms": 962,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/en-ca.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1380305,
+          "duration_ms": 1043,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/de.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1376154,
+          "duration_ms": 897,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/cs.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1376128,
+          "duration_ms": 987,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/es.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1377636,
+          "duration_ms": 977,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/fr.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1377623,
+          "duration_ms": 1069,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/ro.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1377649,
+          "duration_ms": 949,
+          "http_requests": 1
+        },
+        {
+          "url": "https://www.moonpay.com/sitemap/it.xml",
+          "origin": "sitemap",
+          "http_status": 200,
+          "response_class": "transport_error",
+          "reason_code": "no_rates_in_feed",
+          "size_bytes": 1376154,
+          "duration_ms": 855,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:57:01Z",
+      "duration_ms": 38206,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, фиатный on-ramp; 307 при разведке"
+    },
+    {
+      "domain": "netex24.net",
+      "name": "NetEx24",
+      "source": "manual",
+      "status": "error",
+      "reason_code": "robots_unavailable",
+      "reason_detail": "robots.txt недоступен (tls_error); проверка домена не выполнена",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [],
+      "attempts": [],
+      "checked_at": "2026-11-17T09:57:39Z",
+      "duration_ms": 5638,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка: каталог BestChange отдавал 429/recaptcha, домен не отвечал при разведке"
+    },
+    {
+      "domain": "pm2btc.com",
+      "name": "PM2BTC",
+      "source": "manual",
+      "status": "error",
+      "reason_code": "robots_unavailable",
+      "reason_detail": "robots.txt недоступен (timeout); проверка домена не выполнена",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [],
+      "attempts": [],
+      "checked_at": "2026-11-17T09:57:45Z",
+      "duration_ms": 18793,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, обменник электронных валют"
+    },
+    {
+      "domain": "simpleswap.io",
+      "name": "SimpleSwap",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://simpleswap.io/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 876818,
+          "duration_ms": 841,
+          "http_requests": 1
+        },
+        {
+          "url": "https://simpleswap.io/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 876818,
+          "duration_ms": 982,
+          "http_requests": 1
+        },
+        {
+          "url": "https://simpleswap.io/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 876818,
+          "duration_ms": 1070,
+          "http_requests": 1
+        },
+        {
+          "url": "https://simpleswap.io/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 876818,
+          "duration_ms": 1102,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:58:04Z",
+      "duration_ms": 6233,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, мультивалютный обменник"
+    },
+    {
+      "domain": "simplex.com",
+      "name": "Simplex",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "cross_domain_redirect",
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://simplex.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60,
+          "duration_ms": 2142,
+          "http_requests": 2
+        },
+        {
+          "url": "https://simplex.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60,
+          "duration_ms": 1977,
+          "http_requests": 2
+        },
+        {
+          "url": "https://simplex.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60,
+          "duration_ms": 2002,
+          "http_requests": 2
+        },
+        {
+          "url": "https://simplex.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 60,
+          "duration_ms": 2091,
+          "http_requests": 2
+        }
+      ],
+      "checked_at": "2026-11-17T09:58:10Z",
+      "duration_ms": 20723,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, фиатный on-ramp"
+    },
+    {
+      "domain": "swapter.io",
+      "name": "Swapter",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://swapter.io/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 79003,
+          "duration_ms": 827,
+          "http_requests": 1
+        },
+        {
+          "url": "https://swapter.io/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 79003,
+          "duration_ms": 994,
+          "http_requests": 1
+        },
+        {
+          "url": "https://swapter.io/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 79003,
+          "duration_ms": 986,
+          "http_requests": 1
+        },
+        {
+          "url": "https://swapter.io/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 79003,
+          "duration_ms": 1036,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:58:31Z",
+      "duration_ms": 6164,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, агрегатор обменников"
+    },
+    {
+      "domain": "transcoin.me",
+      "name": "TransCoin",
+      "source": "manual",
+      "status": "ok",
+      "reason_code": "found",
+      "reason_detail": "фид найден, курсов: 14",
+      "format": "bestchange_compatible",
+      "format_evidence": "root <rates> without namespace, items with from/to/in/out",
+      "final_url": "https://transcoin.me/bestchange.xml",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "encoding": "utf-8",
+      "gzip": true,
+      "size_bytes": 37345,
+      "updated_at": null,
+      "rate_count": 14,
+      "mvp_directions_found": [],
+      "examples": [
+        {
+          "exchanger_domain": "transcoin.me",
+          "base": "BTC",
+          "quote": "EUR",
+          "rate": "36320.17766325",
+          "side": "unknown",
+          "reserve": "100000",
+          "reserve_derived": false,
+          "min_amount": null,
+          "max_amount": null,
+          "fee_percent": null,
+          "updated_at": null,
+          "fetched_at": "2026-11-17T10:00:07Z",
+          "direction": "BTC/EUR",
+          "rate_derived": "direct",
+          "source_url": "https://transcoin.me/bestchange.xml",
+          "raw": {
+            "sha256": "abb923c97fc987424ad54526f8ba751a2b983f33dabd6a3dcd8a9f1b7d50a3dc",
+            "size_bytes": 37345,
+            "format": "bestchange_compatible",
+            "encoding": "utf-8",
+            "http_status": 200,
+            "content_type": "text/xml",
+            "gzip": true
+          },
+          "warnings": []
+        },
+        {
+          "exchanger_domain": "transcoin.me",
+          "base": "BTC",
+          "quote": "USD",
+          "rate": "41253.07553704",
+          "side": "unknown",
+          "reserve": "100000",
+          "reserve_derived": false,
+          "min_amount": null,
+          "max_amount": null,
+          "fee_percent": null,
+          "updated_at": null,
+          "fetched_at": "2026-11-17T10:00:07Z",
+          "direction": "BTC/USD",
+          "rate_derived": "direct",
+          "source_url": "https://transcoin.me/bestchange.xml",
+          "raw": {
+            "sha256": "abb923c97fc987424ad54526f8ba751a2b983f33dabd6a3dcd8a9f1b7d50a3dc",
+            "size_bytes": 37345,
+            "format": "bestchange_compatible",
+            "encoding": "utf-8",
+            "http_status": 200,
+            "content_type": "text/xml",
+            "gzip": true
+          },
+          "warnings": []
+        }
+      ],
+      "warnings": [
+        "crawl_delay:10",
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://transcoin.me/rates.xml",
+          "origin": "well_known",
+          "http_status": 500,
+          "response_class": "transport_error",
+          "reason_code": "http_5xx",
+          "size_bytes": 1124,
+          "duration_ms": 30053,
+          "http_requests": 3
+        },
+        {
+          "url": "https://transcoin.me/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 1130,
+          "duration_ms": 9940,
+          "http_requests": 1
+        },
+        {
+          "url": "https://transcoin.me/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 1130,
+          "duration_ms": 9999,
+          "http_requests": 1
+        },
+        {
+          "url": "https://transcoin.me/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 200,
+          "response_class": "payload",
+          "reason_code": "found",
+          "size_bytes": 37345,
+          "duration_ms": 10076,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T09:58:37Z",
+      "duration_ms": 90400,
+      "dropped_rate_rows": {
+        "duplicate_rate": 30,
+        "unmapped_currency:ADVCEUR": 7,
+        "unmapped_currency:ADVCUSD": 7,
+        "unmapped_currency:CARDEUR": 7,
+        "unmapped_currency:CARDUSD": 7,
+        "unmapped_currency:NTLREUR": 7,
+        "unmapped_currency:NTLRUSD": 7,
+        "unmapped_currency:SKLEUR": 7,
+        "unmapped_currency:SKLUSD": 7,
+        "unmapped_currency:WIREEUR": 7,
+        "unmapped_currency:WIREUSD": 7
+      },
+      "notes": "ручная выборка, домен отдавал 403 при разведке"
+    },
+    {
+      "domain": "utorg.pro",
+      "name": "Utorg",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch",
+        "cross_domain_redirect"
+      ],
+      "attempts": [
+        {
+          "url": "https://utorg.pro/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16001,
+          "duration_ms": 504,
+          "http_requests": 1
+        },
+        {
+          "url": "https://utorg.pro/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16029,
+          "duration_ms": 1015,
+          "http_requests": 1
+        },
+        {
+          "url": "https://utorg.pro/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16017,
+          "duration_ms": 993,
+          "http_requests": 1
+        },
+        {
+          "url": "https://utorg.pro/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16021,
+          "duration_ms": 996,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T10:00:07Z",
+      "duration_ms": 6182,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, фиатный on-ramp"
+    },
+    {
+      "domain": "xcoex.com",
+      "name": "XCOEX",
+      "source": "manual",
+      "status": "not_found",
+      "reason_code": "http_404",
+      "reason_detail": "HTTP 404",
+      "format": "unknown",
+      "format_evidence": null,
+      "final_url": null,
+      "http_status": null,
+      "content_type": null,
+      "encoding": null,
+      "gzip": false,
+      "size_bytes": 0,
+      "updated_at": null,
+      "rate_count": 0,
+      "mvp_directions_found": [],
+      "examples": [],
+      "warnings": [
+        "encoding_mismatch"
+      ],
+      "attempts": [
+        {
+          "url": "https://xcoex.com/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16410,
+          "duration_ms": 985,
+          "http_requests": 1
+        },
+        {
+          "url": "https://xcoex.com/export/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16410,
+          "duration_ms": 1033,
+          "http_requests": 1
+        },
+        {
+          "url": "https://xcoex.com/xml/rates.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16410,
+          "duration_ms": 975,
+          "http_requests": 1
+        },
+        {
+          "url": "https://xcoex.com/bestchange.xml",
+          "origin": "well_known",
+          "http_status": 404,
+          "response_class": "not_found",
+          "reason_code": "http_404",
+          "size_bytes": 16410,
+          "duration_ms": 1007,
+          "http_requests": 1
+        }
+      ],
+      "checked_at": "2026-11-17T10:00:14Z",
+      "duration_ms": 6225,
+      "dropped_rate_rows": {},
+      "notes": "ручная выборка, биржа"
+    }
+  ]
+}
