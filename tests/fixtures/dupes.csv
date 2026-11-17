@@ -1,0 +1,4 @@
+name,domain,url,source,notes
+Exchanger A,exchanger-a.test,https://exchanger-a.test/,manual,fixture
+Exchanger A duplicate,exchanger-a.test,https://exchanger-a.test/,manual,duplicate row
+Exchanger B,exchanger-b.test,https://exchanger-b.test/,manual,fixture

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rates>
+  <item>
+    <from>BTC</from>
+    <to>SberbankRUB</to>
+    <in>1</in>
+    <out>7750000</out>
+    <amount>12.5</amount>
+    <minamount>0.001</minamount>
+    <maxamount>5</maxamount>
+    <fromfee>1</fromfee>
+    <tofee>0</tofee>
+  </item>
+  <item>
+    <from>USDTTRC</from>
+    <to>SberbankRUB</to>
+    <in>1000</in>
+    <out>91800</out>
+    <amount>2500000</amount>
+  </item>
+</rates>

@@ -1,0 +1,3 @@
+name,domain,url,source,notes
+Exchanger A,exchanger-a.test,https://exchanger-a.test/,manual,fixture
+Exchanger B,exchanger-b.test,https://exchanger-b.test/,manual,fixture

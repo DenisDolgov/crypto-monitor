@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rates>
+  <rate>
+    <from>USDT</from>
+    <to>RUB</to>
+    <rate>92.35</rate>
+    <reserve>150000.00</reserve>
+    <minamount>1000</minamount>
+    <maxamount>500000</maxamount>
+    <fee>0.5</fee>
+    <updated>2026-11-17T07:55:00Z</updated>
+  </rate>
+  <rate>
+    <from>BTC</from>
+    <to>RUB</to>
+    <rate>7800000.5</rate>
+    <reserve>3.25</reserve>
+    <updated>2026-11-17 07:50:00</updated>
+  </rate>
+  <rate>
+    <from>ETH</from>
+    <to>USDT</to>
+    <rate>3100.25</rate>
+    <updated>2026-11-17T07:40:00+03:00</updated>
+  </rate>
+</rates>
