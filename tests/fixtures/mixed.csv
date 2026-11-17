@@ -1,0 +1,6 @@
+name,domain,url,source,notes
+Exchanger A,exchanger-a.test,https://exchanger-a.test/,manual,fixture
+Broken Domain,not a domain,https://broken.test/,manual,bad domain
+Broken Url,broken-url.test,ftp://broken-url.test/,manual,bad url
+Unknown Source,unknown-source.test,https://unknown-source.test/,partner,unknown source
+Exchanger B,exchanger-b.test,https://exchanger-b.test/,manual,fixture

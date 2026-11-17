@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rates>
+  <rate>
+    <from>USDT</from>
+    <to>RUB</to>
+    <rate>92.35</rate>
+  </rate>
+  <rate>
+    <from>BTC</from>
+    <to>RUB</to>
+</rates>
