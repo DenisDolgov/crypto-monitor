@@ -1,0 +1,23 @@
+code,name,type,aliases
+RUB,Russian rouble,fiat,SberbankRUB|TinkoffRUB|TbankRUB|AlfaRUB|VTB24RUB|RaiffeisenRUB|RNCB_RUB|RUBRF
+USD,US dollar,fiat,USDollar|CashUSD|USD_CASH|PerfectMoneyUSD|PMUSD|PayeerUSD|AdvCashUSD|VoletUSD
+EUR,Euro,fiat,EURCash|CashEUR|PerfectMoneyEUR|PayeerEUR|SEPAEUR|VoletEUR
+UAH,Ukrainian hryvnia,fiat,Privat24UAH|MonobankUAH|UAH_CASH
+KZT,Kazakhstani tenge,fiat,KaspiKZT|HalykKZT
+TRY,Turkish lira,fiat,PaparaTRY
+GEL,Georgian lari,fiat,
+BTC,Bitcoin,crypto,BTC_BEP20|Bitcoin|XBTC
+USDT,Tether USD,crypto,USDTTRC|USDT-TRC20|USDTTRC20|USDTERC|USDT-ERC20|USDTERC20|USDTBEP|USDT-BEP20|USDTBEP20|USDTSPL|Tether
+USDC,USD Coin,crypto,USDCERC|USDC-TRC20|USDCBEP|USDCSPL
+ETH,Ethereum,crypto,ETHERC|Ethereum|ETHBEP|WETH
+LTC,Litecoin,crypto,LTC_BEP20
+BCH,Bitcoin Cash,crypto,BCHBEP|BitcoinCash
+XRP,XRP,crypto,Ripple
+TRX,TRON,crypto,TRON|TRXTRC
+DAI,Dai stablecoin,crypto,
+DOGE,Dogecoin,crypto,DOGEBEP
+TON,Toncoin,crypto,TONCOIN|Ton
+SOL,Solana,crypto,SOLANA
+BNB,BNB,crypto,BNBBEP|BinanceCoin
+XAU,Gold,metal,XAUUSD|Gold
+XAG,Silver,metal,XAGUSD|Silver
